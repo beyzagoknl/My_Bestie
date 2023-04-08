@@ -1,0 +1,32 @@
+{
+  "name": "settly-internship-assessment",
+  "version": "1.0.0",
+  "description": "This is the internship assesment for the Settly.",
+  "main": "index.js",
+  "dependencies": {
+    "concurrently": "^7.6.0",
+    "jsonwebtoken": "^9.0.0",
+    "jwt-decode": "^3.1.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "test:cypress": "cd client && npm run test:cypress",
+    "start": "npm run start:server",
+    "start:server": "cd server && npm run start && cd ..",
+    "start:client": "cd client && npm run start && cd ..",
+    "dev": "concurrently \"npm run start:client\" \"npm run dev:server\"",
+    "dev:client": "cd client && npm run start && cd ..",
+    "dev:server": "cd server && npm run dev && cd .."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/beyzagoknl/Settly-Internship-Assessment.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/beyzagoknl/Settly-Internship-Assessment/issues"
+  },
+  "homepage": "https://github.com/beyzagoknl/Settly-Internship-Assessment#readme"
+}

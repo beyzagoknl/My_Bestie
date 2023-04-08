@@ -1,0 +1,21 @@
+.login-container {
+  max-width: 40rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  margin: auto;
+  padding: 1rem 1rem 0rem 1rem;
+}
+
+.login-page {
+  margin: 3rem 0 0rem 0;
+  min-height: 100vh;
+}
+.login-create-account {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.login-here {
+  color: tomato;
+}

@@ -1,0 +1,111 @@
+.register-container {
+  max-width: 40rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  margin: auto;
+  padding: 1rem 1rem 0rem 1rem;
+}
+
+.register-page {
+  margin: 3rem 0 0rem 0;
+  min-height: 100vh;
+}
+.register-create-account {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.input-container {
+  width: 100%;
+  position: relative;
+}
+
+.btn-submit,
+.input-field {
+  border: none;
+  outline: none;
+  width: 100%;
+  border-radius: var(--radius);
+  padding: 0.6rem 1.2rem;
+  box-shadow: var(--dark-shadow);
+}
+
+.btn-submit:hover {
+  background: var(--clr-btn);
+}
+.p-with-link {
+  width: 100%;
+  margin: 1rem;
+  text-align: center;
+}
+
+.btn-link {
+  border: none;
+  font-size: 1.05rem;
+  background: none;
+}
+.input-with-tip {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tip-icon {
+  margin-left: 1rem;
+  cursor: pointer;
+}
+
+.tip {
+  opacity: 0;
+  padding: 1rem;
+  bottom: 100%;
+  left: -100%;
+  z-index: 1;
+  width: 20rem;
+  margin-left: 0.3rem;
+  border-radius: 0.65rem;
+  text-align: justify;
+  color: white;
+  background-image: linear-gradient(
+    to left,
+    #65d6d1,
+    #7ee0db,
+    #65d6d1,
+    #65abd6
+  );
+  position: absolute;
+  transition: opacity 0.4s ease-out, left 0.4s ease-out, bottom 0.4s ease-out;
+}
+.tip-icon:hover + .tip {
+  opacity: 1;
+  left: 0%;
+  color: var(--clr-white);
+}
+.invalid-input {
+  border: 0.1rem solid var(--clr-red);
+  background-repeat: no-repeat;
+  background-position: top 50% right 10px;
+  padding-right: 10px;
+}
+
+.error-alert {
+  padding: 0.8rem;
+  border-radius: 0.5rem;
+  box-shadow: var(--dark-shadow);
+  background-color: rgba(218, 68, 68, 0.15);
+  color: var(--clr-red);
+  margin: 0.65rem 0rem;
+}
+
+.error-text {
+  font-size: 0.8rem;
+  color: var(--clr-red);
+  margin-left: 1rem;
+}
+
+.register-here {
+  color: tomato;
+}

@@ -1,0 +1,146 @@
+* {
+  text-decoration: none;
+  list-style: none;
+}
+
+.navbar {
+  background-color: var(--clr-white);
+  height: 7rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.icon {
+  width: 1.75rem;
+  height: 1.75rem;
+  cursor: pointer;
+}
+
+.icon:last-child {
+  margin: 0 2rem;
+}
+
+.menu-bars {
+  margin-left: 1.3rem;
+  font-size: 2rem;
+  background: none;
+}
+.menu-bars-close {
+  font-size: 2rem;
+  background: none;
+}
+.nav-menu {
+  background-color: var(--clr-white);
+  width: 25rem;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: -500%;
+  transition: 100ms;
+  padding-left: 1rem;
+  z-index: 2;
+}
+
+.nav-menu.active {
+  left: 0;
+  transition: 350ms;
+}
+.buttons-nav {
+  display: none;
+}
+.buttons-hamburger {
+  display: flex;
+  justify-content: space-between;
+  margin-right: 3rem;
+}
+.button-nav {
+  background-color: #65d6d1;
+  color: #ffffff;
+  border-radius: 0.65rem;
+  border: none;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
+  padding: 0.5rem 2rem;
+  font-family: "Poppins", sans-serif;
+  align-items: center;
+  margin-left: 1rem;
+  width: 8rem;
+}
+.button-nav:hover {
+  cursor: pointer;
+  transform: scale(1.02);
+}
+.button-hamburger {
+  background-color: #65d6d1;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
+  border: none;
+  color: var(--clr-white);
+  border-radius: 10px;
+  padding: 0.4rem 2rem;
+  margin: 0.5rem 0rem 3rem 0rem;
+  width: 100%;
+  font-family: "Poppins", sans-serif;
+  align-items: center;
+  width: 8rem;
+}
+.button-hamburger:hover {
+  cursor: pointer;
+  transform: scale(1.02);
+}
+
+.nav-menu-items {
+  width: 100%;
+}
+
+.navbar-toggle {
+  background-color: #ffffff;
+  width: 100%;
+  height: 6rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.user-name-nav {
+  color: #65d6d1;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.2em;
+}
+
+.user-name-hamburger {
+  margin-top: 1rem;
+  color: #65d6d1;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.2em;
+}
+
+.logo-img {
+  cursor: pointer;
+  width: 7rem;
+  margin: 0rem auto;
+}
+
+@media only screen and (min-width: 1000px) {
+  .hamburger {
+    display: none;
+  }
+  .navbar {
+    display: flex;
+    padding: 1.1rem 0;
+  }
+
+  .menu-bars {
+    display: none;
+  }
+
+  .buttons-nav {
+    display: flex;
+    margin: 0 1rem 0 0;
+  }
+
+  .logo-img {
+    margin-left: 0rem;
+  }
+}

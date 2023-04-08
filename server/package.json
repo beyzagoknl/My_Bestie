@@ -1,0 +1,32 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "Settly",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node ./src/index",
+    "dev": "nodemon ./src/index"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.0",
+    "mongoose": "^7.0.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.21"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/beyzagoknl/Settly-Internship-Assessment.git"
+  },
+  "bugs": {
+    "url": "https://github.com/beyzagoknl/Settly-Internship-Assessment/issues"
+  },
+  "homepage": "https://github.com/beyzagoknl/Settly-Internship-Assessment#readme"
+}
