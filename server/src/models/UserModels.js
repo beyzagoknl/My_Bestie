@@ -32,6 +32,11 @@ const userSchema = new mongoose.Schema(
       },
     },
 
+    image: {
+      type: String,
+      required: [true, "Please add an image"],
+    },
+
     password: {
       type: String,
       required: [true, "Password is required"],

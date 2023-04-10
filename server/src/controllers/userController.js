@@ -1,4 +1,4 @@
-import User from "../models/User.js";
+import User from "../models/UserModels.js";
 import validationErrorMessage from "../util/validationErrorMessage.js";
 import { EXPIRES_IN } from "../util/constants.js";
 import {
@@ -78,6 +78,7 @@ export const createUser = async (req, res) => {
           firstName: newUser.firstName,
           surname: newUser.surname,
           email: newUser.email,
+          image: newUser.image,
           accessToken: accessToken,
         });
       } else {
@@ -144,6 +145,7 @@ export const login = async (req, res) => {
         firstName: user.firstName,
         surname: user.surname,
         email: user.email,
+        image: user.image,
         accessToken: accessToken,
       });
     } else {
