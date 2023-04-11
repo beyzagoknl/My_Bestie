@@ -23,6 +23,7 @@ export const registerUser = createAsyncThunk(
         surname: values.surname,
         email: values.email,
         password: values.password,
+        image: values.image,
       });
       return res.data;
     } catch (error) {
