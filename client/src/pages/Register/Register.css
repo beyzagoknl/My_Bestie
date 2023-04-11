@@ -109,3 +109,17 @@
 .register-here {
   color: tomato;
 }
+.image-preview {
+  width: 10cm;
+  height: 10cm;
+  object-fit: cover;
+  border-radius: 60%;
+}
+input::file-selector-button {
+  background-color: #000000;
+  color: #ffffff;
+  border-radius: 10px;
+  padding: 0.3rem;
+  cursor: pointer;
+  font-family: "Poppins", sans-serif;
+}

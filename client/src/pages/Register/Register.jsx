@@ -7,6 +7,7 @@ import { FaQuestion } from "react-icons/fa";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import "../Register/Register.css";
+import axios from "axios";
 
 const Register = () => {
   const dispatch = useDispatch();
@@ -19,7 +20,30 @@ const Register = () => {
     email2: "",
     password: "",
     password2: "",
+    image: "",
   });
+
+  const [userFile, setUserFile] = useState({
+    file: [],
+    filePreview: null,
+  });
+
+  const handleImageLoading = (e) => {
+    const binaryData = [];
+    const previewedImage = e.target.files[0];
+    binaryData.push(previewedImage);
+
+    if (previewedImage && previewedImage.size > 1e7) {
+      toast.error("Oops! The size of image is larger than 10MB.");
+      return (e.target.value = null);
+    }
+
+    setUserFile({
+      ...userFile,
+      file: previewedImage,
+      filePreview: URL.createObjectURL(new Blob(binaryData)),
+    });
+  };
 
   const { firstName, surname, email, email2, password, password2 } = user;
 
@@ -31,24 +55,36 @@ const Register = () => {
 
   let errors = {};
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+    const data = new FormData();
+    data.append("file", userFile.file);
+    data.append("upload_preset", "uploads");
+    try {
+      const uploadRes = await axios.post(
+        "https://api.cloudinary.com/v1_1/dcfih6gcs/image/upload",
+        data
+      );
+      const { url } = uploadRes.data;
 
-    if (password !== password2) {
-      toast.error("Password does not match!");
-    } else if (email !== email2) {
-      toast.error("Email does not match!");
-    } else {
-      const userData = {
-        firstName,
-        surname,
-        email,
-        password,
-      };
-      dispatch(registerUser(userData));
+      if (password !== password2) {
+        toast.error("Password does not match!");
+      } else if (email !== email2) {
+        toast.error("Email does not match!");
+      } else {
+        const userData = {
+          firstName,
+          surname,
+          email,
+          password,
+          image: url,
+        };
+        dispatch(registerUser(userData));
+      }
+    } catch (err) {
+      throw new Error();
     }
   };
-
   if (auth.registerError.errors) {
     errors = auth.registerError.errors;
   }
@@ -182,6 +218,20 @@ const Register = () => {
                 <p className="error-text">{errors.password}</p>
               )}
             </div>
+            <input
+              type="file"
+              name="file"
+              accept="image/png, image/gif, image/jpeg"
+              onChange={handleImageLoading}
+            />
+            {userFile.filePreview !== null ? (
+              <img
+                className="image-preview"
+                src={userFile.filePreview}
+                alt=""
+              />
+            ) : null}
+
             <button className="btn-submit">
               {auth.registerStatus === "pending"
                 ? "Submitting..."
