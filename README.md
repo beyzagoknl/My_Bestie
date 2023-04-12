@@ -1,3 +1,8 @@
+# Look at My Cypress Test# MYBESTIE
+
+![Preview of MyBestie Cypress Test!](/client/src/assets/register.GIF)
+![Preview of MyBestie Cypress Test!](/client/src/assets/login.GIF)
+
 # Look at Me
 
 ![Preview of MyBestie!](/client/src/assets/mybestie-1.GIF)
