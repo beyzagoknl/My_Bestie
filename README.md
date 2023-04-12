@@ -1,8 +1,12 @@
 # Look at My Cypress Test
 
-![Preview of MyBestie Cypress Test!](/client/src/assets/registerPageTesting.GIF)
+# Register Page
 
 ![Preview of MyBestie Cypress Test!](/client/src/assets/loginPageTesting.GIF)
+
+# Login Page
+
+![Preview of MyBestie Cypress Test!](/client/src/assets/registerPageTesting.GIF)
 
 # Look at Me
 
