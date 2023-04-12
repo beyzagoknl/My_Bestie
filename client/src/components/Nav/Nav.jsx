@@ -25,6 +25,7 @@ const Nav = () => {
     navigate("/login");
   };
   const showSidebar = () => setSidebar(!sidebar);
+  console.log(user);
   return (
     <nav>
       <IconContext.Provider value={{ color: "#000000" }}>
@@ -56,6 +57,12 @@ const Nav = () => {
                   <Link to="/" className="user-name-nav">
                     Hello, {user.firstName}
                   </Link>
+                  <img
+                    alt="user"
+                    className="user-img"
+                    onClick={() => navigate("/")}
+                    src={user.image}
+                  />
                   <FiLogOut className="icon" onClick={onLogout} />
                 </div>
               )}
@@ -75,6 +82,7 @@ const Nav = () => {
                   <Link to="/" className="user-name-hamburger">
                     Hello, {user.firstName}
                   </Link>
+
                   <button className="button-hamburger" onClick={onLogout}>
                     Log out
                   </button>
