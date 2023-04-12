@@ -5,7 +5,8 @@ export class SignUpPage {
     email,
     confirmedEmail,
     password,
-    confirmedPassword
+    confirmedPassword,
+    image
   ) {
     cy.get(".register-page").then((input) => {
       cy.wrap(input).find('[placeholder="First Name"]').type(firstName);
@@ -18,6 +19,7 @@ export class SignUpPage {
       cy.wrap(input)
         .find('[placeholder="Repeat your password"]')
         .type(confirmedPassword);
+      cy.wrap(input).find('[type="file"]').selectFile(image, { force: true });
       cy.wrap(input).find(".btn-submit").click();
     });
   }

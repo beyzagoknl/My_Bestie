@@ -7,12 +7,8 @@ describe("Login process", () => {
     cy.openLoginPage();
   });
 
-  it("should be entered verify  email", () => {
-    onLoginPage.submitForm("angela@gmail.com", "Angela!123", "Angela!123");
-    cy.get('[class="home-text"]').should("contain", "Welcome My Friend");
-  });
-  it("should be verify password", () => {
+  it("should be entered verify  email and password", () => {
     onLoginPage.submitForm("angela@gmail.com", "Angela!123");
-    cy.get('[class="home-text"]').should("contain", "Welcome My Friend");
+    cy.get(".user-name-nav").should("contain", "Hello, Angela");
   });
 });

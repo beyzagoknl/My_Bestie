@@ -52,7 +52,7 @@ describe("Sign up process", () => {
       "A user with the email address 'angela@gmail.com' already exists"
     );
   });
-  it("should be everything correct", () => {
+  it.only("should be everything correct", () => {
     const randomEmail = Math.random();
     const email = `beyza${randomEmail}@gmail.com`;
     onSignUpPage.submitForm(
@@ -61,7 +61,8 @@ describe("Sign up process", () => {
       email,
       email,
       "Beyza$asd23",
-      "Beyza$asd23"
+      "Beyza$asd23",
+      "cypress/fixtures/image.jpg"
     );
     cy.get(".user-name-nav").should("contain", "Hello, Beyza");
   });
