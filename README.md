@@ -1,6 +1,7 @@
-# Look at My Cypress Test# MYBESTIE
+# Look at My Cypress Test
 
 ![Preview of MyBestie Cypress Test!](/client/src/assets/registerPageTesting.GIF)
+
 ![Preview of MyBestie Cypress Test!](/client/src/assets/loginPageTesting.GIF)
 
 # Look at Me
