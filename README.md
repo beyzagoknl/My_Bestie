@@ -8,13 +8,21 @@
 
 ![Preview of MyBestie Cypress Test!](/client/src/assets/registerPageTesting.GIF)
 
-# Look at Me
-
-![Preview of MyBestie!](/client/src/assets/mybestie-1.GIF)
-
 # MyBestie is Your Friend
 
+I'm here with pill projects specific to companies. "MyBestie" is the first of them.
+
+"MyBestie" is a user registration and login application.
+
+** E2E testing control. No bug no suprise.
+** Unique Design
+** Mobile First Design
+** User experience is appropriate with hamburger menu and user photo
+\_\_Safe with JWT
+
 This app mobile first is designed. The logo used was designed by Beyza GOK.
+
+![Preview of MyBestie!](/client/src/assets/mybestie-1.GIF)
 
 # Built with
 
