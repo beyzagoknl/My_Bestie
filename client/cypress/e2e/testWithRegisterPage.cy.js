@@ -14,7 +14,8 @@ describe("Sign up process", () => {
       "beyza@gmail.com",
       "beyza1@gmail.com",
       "Beyza$asd",
-      "Beyza$asd"
+      "Beyza$asd",
+      "cypress/fixtures/image.jpg"
     );
     cy.get(
       '[class="Toastify__toast-icon Toastify--animate-icon Toastify__zoom-enter"]'
@@ -29,7 +30,8 @@ describe("Sign up process", () => {
       "beyza@gmail.com",
       "beyza@gmail.com",
       "Beyza$asd",
-      "Beyza$asd1"
+      "Beyza$asd1",
+      "cypress/fixtures/image.jpg"
     );
     cy.get(
       '[class="Toastify__toast-icon Toastify--animate-icon Toastify__zoom-enter"]'
@@ -44,7 +46,8 @@ describe("Sign up process", () => {
       "angela@gmail.com",
       "angela@gmail.com",
       "Beyza$asd",
-      "Beyza$asd"
+      "Beyza$asd",
+      "cypress/fixtures/image.jpg"
     );
 
     cy.get(".error-alert").should(
@@ -52,7 +55,7 @@ describe("Sign up process", () => {
       "A user with the email address 'angela@gmail.com' already exists"
     );
   });
-  it.only("should be everything correct", () => {
+  it("should be everything correct", () => {
     const randomEmail = Math.random();
     const email = `beyza${randomEmail}@gmail.com`;
     onSignUpPage.submitForm(
