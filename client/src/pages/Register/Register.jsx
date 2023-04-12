@@ -219,6 +219,7 @@ const Register = () => {
               )}
             </div>
             <input
+              className="input-container"
               type="file"
               name="file"
               accept="image/png, image/gif, image/jpeg"
